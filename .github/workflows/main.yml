@@ -1,0 +1,26 @@
+name: Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build and test
+        run: |
+          echo "Building..."
+          # Comandos de build do seu projeto
+          echo "Running tests..."
+          # Comandos para executar testes
+
+      - name: Deploy to production
+        run: |
+          echo "Deploying to production..."
+          # Comandos para implantar seu aplicativo em um ambiente de produção
